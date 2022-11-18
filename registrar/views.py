@@ -38,11 +38,14 @@ def eliminar_empleado(request,id):
 
 #time.strftime("%m/%d/%Y, %H:%M:%S",time.localtime())
 
-def delete_time():
-    empleado = Empleado.objects.all()
-    empleado.delete()
-    return
-hours = time.strftime("%H:%M",time.localtime())
+def get_act_time():
+    hours = time.strftime("%H:%M",time.localtime())
+    pass
+
+def select_time():
+    pass
+
+
       
 
 
