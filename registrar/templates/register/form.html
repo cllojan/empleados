@@ -1,0 +1,37 @@
+{% extends 'register/index.html'%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+    {{form.nombre_comp|as_crispy_field}}
+    {{form.celular|as_crispy_field}}
+    <div class="row">
+        <div class="col-md-4">
+            {{form.codigo_emp|as_crispy_field}}
+        </div>
+        <div class="col-md-8">
+            {{form.posicion|as_crispy_field}}
+        </div>
+    </div>
+    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        </div>
+      </div>
+  
+      <script>
+        $(function () {
+          $("#datetimepicker1").datetimepicker();
+        });
+      </script>
+    <div class="cont mt-4">
+        <button type="submit" class="btn btn-success "><i class="fas fa-database"></i> Crear</button>
+    <a href="{% url 'lista_empleado'%}" class="btn btn-secondary ">
+        <i class="fas fa-stream"></i> Ver Lista
+    </a>
+    </div>
+</form>
+    
+{% endblock content %}
