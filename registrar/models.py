@@ -11,9 +11,6 @@ class Empleado(models.Model):
     celular = models.CharField(max_length=15)
     posicion = models.ForeignKey(Posicion,on_delete=models.CASCADE)
     act_time = models.DateTimeField(null=True)
-    end_time = models.DateTimeField()
+    end_time = models.DateTimeField(null=True)
    
-   ''' @property
-    def date_act():
-        dateAct = time.strftime("%m/%d/%Y %H:%M %p",time.localtime())
-        return dateAct'''
+   
