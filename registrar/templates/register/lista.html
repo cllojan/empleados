@@ -6,6 +6,8 @@
                 <td>Nombre Completo</td>
                 <td>Celular</td>
                 <td>Posicion</td>
+                <td>Fecha Inicial</td>
+                <td>Fecha Final</td>
                 <td>
                     <a href="{% url 'insertar_empleado'%}" class="btn btn-outline-success">
                         <i class="fas fa-plus"></i> Agregar
@@ -19,6 +21,8 @@
                     <td>{{empleado.nombre_comp}}</td>
                     <td>{{empleado.celular}}</td>
                     <td>{{empleado.posicion}}</td>
+                    <td>{{empleado.act_time}}</td>
+                    <td>{{empleado.end_time}}</td>
                     <td>
                         <a href="{% url 'actualizar_empleado' empleado.id%}" class="btn text-secondary px-0">
                             <i class="far fa-edit fa-lg"></i>

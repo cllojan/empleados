@@ -10,7 +10,7 @@ class Empleado(models.Model):
     codigo_emp = models.CharField(max_length=3)    
     celular = models.CharField(max_length=15)
     posicion = models.ForeignKey(Posicion,on_delete=models.CASCADE)
-    act_time = models.DateTimeField(null=True)
-    end_time = models.DateTimeField(null=True)
+    act_time = models.DateTimeField(null=False)
+    end_time = models.DateTimeField(null=False)
    
    

@@ -1,4 +1,5 @@
 from django import forms 
+import time
 from .models import Empleado
 
 
